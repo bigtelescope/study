@@ -22,6 +22,8 @@ def draw_line(slope, y_intercept, color='grey', linewidth=0.7, starting=0, endin
     pyplot.plot(x, y_intercept + slope*x, linestyle='-', color=color, linewidth=linewidth)
 
 
+# как работает метод: в каждой итерации выбирается произвольная опорная точка, к которой
+# поворачивается и подвигается прямая путем изменения линейной функции последней
 def square_regression(features, labels, learning_rate=0.01, iterations=1000):
     base_weight, base_offset = rand.random(), rand.random()
     print('initial params: ', base_weight, base_offset)
